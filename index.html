@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Recipedia is an AI-powered food subscription that will make you eat healthy again, 365 days per year. It's tailored to your personal tastes and nutritional needs."
+    />
+
+    <!-- Always include this line of code!!! -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="img/favicon.png" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!--font awsome-->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+  />
+
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
+   
+
+    <title>Recipedia &mdash; Never cook again!</title>
+  </head>
+  <body>
+    <header class="header">
+      <a class="logo" href="#">
+        <svg width="41" height="39" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7.16316 0.383255C8.96208 0.383255 10.4191 1.84031 10.4191 3.63924V4.29043C10.4191 4.64859 10.1261 4.94163 9.76794 4.94163C7.96901 4.94163 6.51196 3.48458 6.51196 1.68565V1.03445C6.51196 0.676293 6.805 0.383255 7.16316 0.383255ZM2.27919 1.68565H4.23277C4.77408 1.68565 5.20957 2.12113 5.20957 2.66244C5.20957 3.20375 4.77408 3.63924 4.23277 3.63924H2.27919C1.73788 3.63924 1.30239 3.20375 1.30239 2.66244C1.30239 2.12113 1.73788 1.68565 2.27919 1.68565ZM0.976794 4.61603H5.53517C6.07647 4.61603 6.51196 5.05152 6.51196 5.59282C6.51196 6.13413 6.07647 6.56962 5.53517 6.56962H0.976794C0.435487 6.56962 0 6.13413 0 5.59282C0 5.05152 0.435487 4.61603 0.976794 4.61603ZM1.30239 8.5232C1.30239 7.9819 1.73788 7.54641 2.27919 7.54641H4.23277C4.77408 7.54641 5.20957 7.9819 5.20957 8.5232C5.20957 9.06451 4.77408 9.5 4.23277 9.5H2.27919C1.73788 9.5 1.30239 9.06451 1.30239 8.5232ZM11.0703 1.03445C11.0703 0.676293 11.3634 0.383255 11.7215 0.383255C13.5205 0.383255 14.9775 1.84031 14.9775 3.63924V4.29043C14.9775 4.64859 14.6845 4.94163 14.3263 4.94163C12.5274 4.94163 11.0703 3.48458 11.0703 1.68565V1.03445ZM16.2799 0.383255C18.0788 0.383255 19.5359 1.84031 19.5359 3.63924V4.29043C19.5359 4.64859 19.2428 4.94163 18.8847 4.94163C17.0858 4.94163 15.6287 3.48458 15.6287 1.68565V1.03445C15.6287 0.676293 15.9217 0.383255 16.2799 0.383255ZM19.5359 6.89522V7.54641C19.5359 9.34534 18.0788 10.8024 16.2799 10.8024C15.9217 10.8024 15.6287 10.5094 15.6287 10.1512V9.5C15.6287 7.70107 17.0858 6.24402 18.8847 6.24402C19.2428 6.24402 19.5359 6.53706 19.5359 6.89522ZM14.3263 6.24402C14.6845 6.24402 14.9775 6.53706 14.9775 6.89522V7.54641C14.9775 9.34534 13.5205 10.8024 11.7215 10.8024C11.3634 10.8024 11.0703 10.5094 11.0703 10.1512V9.5C11.0703 7.70107 12.5274 6.24402 14.3263 6.24402ZM10.4191 6.89522V7.54641C10.4191 9.34534 8.96208 10.8024 7.16316 10.8024C6.805 10.8024 6.51196 10.5094 6.51196 10.1512V9.5C6.51196 7.70107 7.96901 6.24402 9.76794 6.24402C10.1261 6.24402 10.4191 6.53706 10.4191 6.89522ZM0.142449 13.2281C0.0651196 12.6298 0.529097 12.1048 1.13145 12.1048H19.7068C20.3092 12.1048 20.7732 12.6298 20.6999 13.2281C20.4435 15.2712 18.8928 16.8667 16.9311 17.233V17.3144C16.9311 18.0347 16.3491 18.6167 15.6287 18.6167H5.20957C4.48918 18.6167 3.90718 18.0347 3.90718 17.3144V17.233C1.94545 16.8667 0.394788 15.2712 0.142449 13.2281Z" fill="#F39D1A"/>
+          </svg><span class="logo-txt">Recipedia</span>
+      </a>
+
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a class="main-nav-link" href="#Home">Home</a></li>
+          <li><a class="main-nav-link" href="#Recipe">Recipe</a></li>
+          <li><a class="main-nav-link" href="#btn">Search</a></li>
+          <li>
+            <a class="main-nav-link" href="#Community">Community</a>
+          </li>
+          <li><a class="main-nav-link" href="#about-us">About Us</a></li>
+          <li><a class="main-nav-link nav-cta" href="#cta">Try for free</a></li>
+        </ul>
+      </nav>
+
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+    </header>
+
+    <main>
+      <section class="section-hero" id="Home">
+        <div class="hero">
+          <div class="hero-text-box">
+            <h1 class="heading-primary">
+              Cooking Made Fun<br>
+             and Easy: Unleash
+             Your Inner Chef
+            </h1>
+            <p class="hero-description">
+              Discover more than <span>10.000 recipes</span> in your hand with the best recipe. Help you to find the easiest way to cook.
+            </p>
+            <a href="#btn" class="btn btn--full margin-right-sm"
+              >Explore Recipes</a
+            >
+
+            <a href="#how" class="btn btn--outline">Learn more &darr;</a>
+            <div class="delivered-meals">
+              <div class="delivered-imgs">
+                <img src="img/customers/customer-1.jpg" alt="Customer photo" />
+                <img src="img/customers/customer-2.jpg" alt="Customer photo" />
+                <img src="img/customers/customer-3.jpg" alt="Customer photo" />
+                <img src="img/customers/customer-4.jpg" alt="Customer photo" />
+                <img src="img/customers/customer-5.jpg" alt="Customer photo" />
+                <img src="img/customers/customer-6.jpg" alt="Customer photo" />
+              </div>
+              <p class="delivered-text">
+                <span>250,000+</span> meals delivered last year!
+              </p>
+            </div>
+          </div>
+          <div class="hero-img-box">
+            <picture>
+              <source srcset="img/hero.webp" type="image/webp" />
+              <source srcset="img/hero-min.png" type="image/png" />
+
+              <img
+                src="img/hero-min.png"
+                class="hero-img"
+                alt="Woman enjoying food, meals in storage container, and food bowls on a table"
+              />
+            </picture>
+          </div>
+        </div>
+      </section>
+      <!--Discover, Create, share-->
+      <section class="section-meals" id="Recipe">
+        <div class="container">
+          <h2 class="heading-secondary">
+            Discover, Create, Share
+          </h2>
+          <p class="hero-description">
+           Check our most popular recipes of the week
+          </p>
+        </div>
+
+        <div class="container grid grid--3-cols margin-bottom-md">
+          <div class="box-meal">
+            <img
+              src="img/creamy Salad.png"
+              class="box-meal-img"
+              alt="Creamy Salad"
+            />
+            <div class="meal-content">
+              <div class="meal-tags">
+                <span class="tag tag--time">10 Mins</span>
+                <span class="tag tag--paleo">Easy</span>
+              </div>
+              <p class="meal-title">Creamy Salad</p>
+              <ul class="meal-attributes">
+                <li class="meal-attribute">
+                  <ion-icon class="meal-icon" name="flame-outline"></ion-icon>
+                  <span><strong>650</strong> calories</span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon
+                    class="meal-icon"
+                    name="restaurant-outline"
+                  ></ion-icon>
+                  <span> <strong>2 </strong>Serving</span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon class="meal-icon" name="star-outline"></ion-icon>
+                  <span><strong>4.9</strong> rating (537)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="box-meal">
+            <img
+              src="img/img/Tofu Tomatose Soup.png"
+              class="box-meal-img"
+              alt="Tofu Tomatose Soup"
+            />
+            <div class="meal-content">
+              <div class="meal-tags">
+                <span class="tag tag--time">15 Min</span>
+                <span class="tag tag--paleo">Easy</span>
+              </div>
+              <p class="meal-title">Tofu Tomatose Soup</p>
+              <ul class="meal-attributes">
+                <li class="meal-attribute">
+                  <ion-icon class="meal-icon" name="flame-outline"></ion-icon>
+                  <span><strong>400</strong> calories</span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon
+                    class="meal-icon"
+                    name="restaurant-outline"
+                  ></ion-icon>
+                  <span><strong>3 </strong>Serving</span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon class="meal-icon" name="star-outline"></ion-icon>
+                  <span><strong>4.8</strong> rating (441)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="box-meal">
+            <img
+              src="img/img/Avocado Salad.jpg"
+              class="box-meal-img"
+              alt="Avocado Salad"
+            />
+            <div class="meal-content">
+              <div class="meal-tags">
+                <span class="tag tag--time">10 Min</span>
+                <span class="tag tag--paleo">Easy</span>
+              </div>
+              <p class="meal-title">Avocado Salad</p>
+              <ul class="meal-attributes">
+                <li class="meal-attribute">
+                  <ion-icon class="meal-icon" name="flame-outline"></ion-icon>
+                  <span><strong>400</strong> calories</span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon
+                    class="meal-icon"
+                    name="restaurant-outline"
+                  ></ion-icon>
+                  <span><strong>2 </strong>Serving</span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon class="meal-icon" name="star-outline"></ion-icon>
+                  <span><strong>4.8</strong> rating (441)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+         <!---2-->
+         <div class="box-meal">
+          <img
+            src="img/img/Mushroom Soup.png"
+            class="box-meal-img"
+            alt="Mushroom Soup"
+          />
+          <div class="meal-content">
+            <div class="meal-tags">
+              <span class="tag tag--time">20 Mins</span>
+              <span class="tag tag--paleo">Medium</span>
+            </div>
+            <p class="meal-title">Mushroom Soup</p>
+            <ul class="meal-attributes">
+              <li class="meal-attribute">
+                <ion-icon class="meal-icon" name="flame-outline"></ion-icon>
+                <span><strong>2</strong> Serving</span>
+              </li>
+              <li class="meal-attribute">
+                <ion-icon
+                  class="meal-icon"
+                  name="restaurant-outline"
+                ></ion-icon>
+                <span> <strong>2 </strong>Serving</span>
+              </li>
+              <li class="meal-attribute">
+                <ion-icon class="meal-icon" name="star-outline"></ion-icon>
+                <span><strong>4.9</strong> rating (537)</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="box-meal">
+          <img
+            src="img/img/Raspberry Pancake.png"
+            class="box-meal-img"
+            alt="Raspberry Pancake"
+          />
+          <div class="meal-content">
+            <div class="meal-tags">
+              <span class="tag tag--time">30 Min</span>
+              <span class="tag tag--paleo">Easy</span>
+            </div>
+            <p class="meal-title">Raspberry Pancake</p>
+            <ul class="meal-attributes">
+              <li class="meal-attribute">
+                <ion-icon class="meal-icon" name="flame-outline"></ion-icon>
+                <span><strong>1 </strong>Serving</span>
+              </li>
+              <li class="meal-attribute">
+                <ion-icon
+                  class="meal-icon"
+                  name="restaurant-outline"
+                ></ion-icon>
+                <span><strong>3 </strong>Serving</span>
+              </li>
+              <li class="meal-attribute">
+                <ion-icon class="meal-icon" name="star-outline"></ion-icon>
+                <span><strong>4.8</strong> rating (441)</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="box-meal">
+          <img
+            src="img/img/Beef Teriyaki.png"
+            class="box-meal-img"
+            alt="Beef Teriyaki"
+          />
+          <div class="meal-content">
+            <div class="meal-tags">
+              <span class="tag tag--time">20 Min</span>
+              <span class="tag tag--paleo">Medium</span>
+            </div>
+            <p class="meal-title">Beef Teriyaki</p>
+            <ul class="meal-attributes">
+              <li class="meal-attribute">
+                <ion-icon class="meal-icon" name="flame-outline"></ion-icon>
+                <span><strong>1</strong> Serving</span>
+              </li>
+              <li class="meal-attribute">
+                <ion-icon
+                  class="meal-icon"
+                  name="restaurant-outline"
+                ></ion-icon>
+                <span><strong>2 </strong>Serving</span>
+              </li>
+              <li class="meal-attribute">
+                <ion-icon class="meal-icon" name="star-outline"></ion-icon>
+                <span><strong>4.8</strong> rating (441)</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        </div>
+
+      </section>
+<!--Search your meal-->
+<section class="section-meals" id="Recipe">
+  <div class="form-container">
+    <form >
+        <input type="text" id="inputText" placeholder=" Search your meal...">
+        <button id="btn" class="btn--search" type="submit">Find</button>
+    </form>
+</div>
+    <div id="list-Items-container">
+    <!-- <div class="food-card">
+    <div class="food-card-image">
+        <img src="http://placehold.it/120x120&text=image3" alt="food">
+        </div>
+        <div class="food-card-info">
+            <h3>Foood namae</h3>
+            </div>
+        </div> -->
+    </div>
+
+</section>
+<!--End Search your meal-->
+
+<!--from Our Community-->
+      <section class="section-testimonials" id="Community">
+        <div class="testimonials-container">
+          <span class="subheading">From Our Community</span>
+          <h2 class="heading-secondary">Once you try it, you can't go back</h2>
+
+          <div class="testimonials">
+            <figure class="testimonial">
+              <img
+                class="testimonial-img"
+                alt="Photo of customer Dave Bryson"
+                src="img/customers/dave.jpg"
+              />
+              <blockquote class="testimonial-text">
+                Inexpensive, healthy and great-tasting meals, without even
+                having to order manually! It feels truly magical.
+              </blockquote>
+              <p class="testimonial-name">&mdash; Dave Bryson</p>
+            </figure>
+
+            <figure class="testimonial">
+              <img
+                class="testimonial-img"
+                alt="Photo of customer Ben Hadley"
+                src="img/customers/ben.jpg"
+              />
+              <blockquote class="testimonial-text">
+                The AI algorithm is crazy good, it chooses the right meals for
+                me every time. It's amazing not to worry about food anymore!
+              </blockquote>
+              <p class="testimonial-name">&mdash; Ben Hadley</p>
+            </figure>
+
+            <figure class="testimonial">
+              <img
+                class="testimonial-img"
+                alt="Photo of customer Steve Miller"
+                src="img/customers/steve.jpg"
+              />
+              <blockquote class="testimonial-text">
+                Recipedia is a life saver! I just started a company, so there's
+                no time for cooking. I couldn't live without my daily meals now!
+              </blockquote>
+              <p class="testimonial-name">&mdash; Steve Miller</p>
+            </figure>
+
+            <figure class="testimonial">
+              <img
+                class="testimonial-img"
+                alt="Photo of customer Hannah Smith"
+                src="img/customers/hannah.jpg"
+              />
+              <blockquote class="testimonial-text">
+                I got Recipedia for the whole family, and it frees up so much
+                time! Plus, everything is organic and vegan and without plastic.
+              </blockquote>
+              <p class="testimonial-name">&mdash; Hannah Smith</p>
+            </figure>
+          </div>
+        </div>
+
+        <div class="gallery">
+          <figure class="gallery-item">
+            <img
+              src="img/gallery/gallery-1.jpg"
+              alt="Photo of beautifully
+            arranged food"
+            />
+            <!-- <figcaption>Caption</figcaption> -->
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="img/gallery/gallery-2.jpg"
+              alt="Photo of beautifully
+            arranged food"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="img/gallery/gallery-3.jpg"
+              alt="Photo of beautifully
+            arranged food"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="img/gallery/gallery-4.jpg"
+              alt="Photo of beautifully
+            arranged food"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="img/gallery/gallery-5.jpg"
+              alt="Photo of beautifully
+            arranged food"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="img/gallery/gallery-6.jpg"
+              alt="Photo of beautifully
+            arranged food"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="img/gallery/gallery-7.jpg"
+              alt="Photo of beautifully
+            arranged food"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="img/gallery/gallery-8.jpg"
+              alt="Photo of beautifully
+            arranged food"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="img/gallery/gallery-9.jpg"
+              alt="Photo of beautifully
+            arranged food"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="img/gallery/gallery-10.jpg"
+              alt="Photo of beautifully
+            arranged food"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="img/gallery/gallery-11.jpg"
+              alt="Photo of beautifully
+            arranged food"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="img/gallery/gallery-12.jpg"
+              alt="Photo of beautifully
+            arranged food"
+            />
+          </figure>
+        </div>
+      </section>
+<!--End from Our Community-->
+
+<!--About US-->
+
+        <!--About US-->
+        <div class="container about-us" id="about-us">
+          <div class="feature">
+            <ion-icon class="feature-icon" name="infinite-outline"></ion-icon>
+            <p class="feature-title">Never cook again!</p>
+            <p class="feature-text">
+              Our subscriptions cover 365 days per year, even including major
+              holidays.
+            </p>
+          </div>
+          <div class="feature">
+            <ion-icon class="feature-icon" name="nutrition-outline"></ion-icon>
+            <p class="feature-title">Local and organic</p>
+            <p class="feature-text">
+              Our cooks only use local, fresh, and organic products to prepare
+              your meals.
+            </p>
+          </div>
+          <div class="feature">
+            <ion-icon class="feature-icon" name="leaf-outline"></ion-icon>
+            <p class="feature-title">No waste</p>
+            <p class="feature-text">
+              All our partners only use reusable containers to package all your
+              meals.
+            </p>
+          </div>
+          <div class="feature">
+            <ion-icon class="feature-icon" name="pause-outline"></ion-icon>
+            <p class="feature-title">Pause anytime</p>
+            <p class="feature-text">
+              Going on vacation? Just pause your subscription, and we refund
+              unused days.
+            </p>
+          </div>
+        </div>
+      </section>
+<!---End About Us-->
+      <section class="section-cta" id="cta">
+        <div class="container">
+          <div class="cta">
+            <div class="cta-text-box">
+              <h2 class="heading-secondary">Get your first meal for free!</h2>
+              <p class="cta-text">
+                Healthy, tasty and hassle-free meals are waiting for you. Start
+                eating well today. You can cancel or pause anytime. And the
+                first meal is on us!
+              </p>
+
+              <form class="cta-form" name="sign-up" netlify>
+                <div>
+                  <label for="full-name">Full Name</label>
+                  <input
+                    id="full-name"
+                    type="text"
+                    placeholder="John Smith"
+                    name="full-name"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label for="email">Email address</label>
+                  <input
+                    id="email"
+                    type="email"
+                    placeholder="me@example.com"
+                    name="email"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label for="select-where">Where did you hear from us?</label>
+                  <select id="select-where" name="select-where" required>
+                    <option value="">Please choose one option:</option>
+                    <option value="friends">Friends and family</option>
+                    <option value="youtube">YouTube video</option>
+                    <option value="podcast">Podcast</option>
+                    <option value="ad">Facebook ad</option>
+                    <option value="others">Others</option>
+                  </select>
+                </div>
+
+                <button class="btn btn--form">Sign up now</button>
+
+                <!-- <input type="checkbox" />
+                <input type="number" /> -->
+              </form>
+            </div>
+            <div
+              class="cta-img-box"
+              role="img"
+              aria-label="Woman enjoying food"
+            ></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container grid grid--footer">
+        <div class="logo-col">
+          <a class="logo" href="#">
+            <svg width="41" height="39" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7.16316 0.383255C8.96208 0.383255 10.4191 1.84031 10.4191 3.63924V4.29043C10.4191 4.64859 10.1261 4.94163 9.76794 4.94163C7.96901 4.94163 6.51196 3.48458 6.51196 1.68565V1.03445C6.51196 0.676293 6.805 0.383255 7.16316 0.383255ZM2.27919 1.68565H4.23277C4.77408 1.68565 5.20957 2.12113 5.20957 2.66244C5.20957 3.20375 4.77408 3.63924 4.23277 3.63924H2.27919C1.73788 3.63924 1.30239 3.20375 1.30239 2.66244C1.30239 2.12113 1.73788 1.68565 2.27919 1.68565ZM0.976794 4.61603H5.53517C6.07647 4.61603 6.51196 5.05152 6.51196 5.59282C6.51196 6.13413 6.07647 6.56962 5.53517 6.56962H0.976794C0.435487 6.56962 0 6.13413 0 5.59282C0 5.05152 0.435487 4.61603 0.976794 4.61603ZM1.30239 8.5232C1.30239 7.9819 1.73788 7.54641 2.27919 7.54641H4.23277C4.77408 7.54641 5.20957 7.9819 5.20957 8.5232C5.20957 9.06451 4.77408 9.5 4.23277 9.5H2.27919C1.73788 9.5 1.30239 9.06451 1.30239 8.5232ZM11.0703 1.03445C11.0703 0.676293 11.3634 0.383255 11.7215 0.383255C13.5205 0.383255 14.9775 1.84031 14.9775 3.63924V4.29043C14.9775 4.64859 14.6845 4.94163 14.3263 4.94163C12.5274 4.94163 11.0703 3.48458 11.0703 1.68565V1.03445ZM16.2799 0.383255C18.0788 0.383255 19.5359 1.84031 19.5359 3.63924V4.29043C19.5359 4.64859 19.2428 4.94163 18.8847 4.94163C17.0858 4.94163 15.6287 3.48458 15.6287 1.68565V1.03445C15.6287 0.676293 15.9217 0.383255 16.2799 0.383255ZM19.5359 6.89522V7.54641C19.5359 9.34534 18.0788 10.8024 16.2799 10.8024C15.9217 10.8024 15.6287 10.5094 15.6287 10.1512V9.5C15.6287 7.70107 17.0858 6.24402 18.8847 6.24402C19.2428 6.24402 19.5359 6.53706 19.5359 6.89522ZM14.3263 6.24402C14.6845 6.24402 14.9775 6.53706 14.9775 6.89522V7.54641C14.9775 9.34534 13.5205 10.8024 11.7215 10.8024C11.3634 10.8024 11.0703 10.5094 11.0703 10.1512V9.5C11.0703 7.70107 12.5274 6.24402 14.3263 6.24402ZM10.4191 6.89522V7.54641C10.4191 9.34534 8.96208 10.8024 7.16316 10.8024C6.805 10.8024 6.51196 10.5094 6.51196 10.1512V9.5C6.51196 7.70107 7.96901 6.24402 9.76794 6.24402C10.1261 6.24402 10.4191 6.53706 10.4191 6.89522ZM0.142449 13.2281C0.0651196 12.6298 0.529097 12.1048 1.13145 12.1048H19.7068C20.3092 12.1048 20.7732 12.6298 20.6999 13.2281C20.4435 15.2712 18.8928 16.8667 16.9311 17.233V17.3144C16.9311 18.0347 16.3491 18.6167 15.6287 18.6167H5.20957C4.48918 18.6167 3.90718 18.0347 3.90718 17.3144V17.233C1.94545 16.8667 0.394788 15.2712 0.142449 13.2281Z" fill="#F39D1A"/>
+              </svg><span class="logo-txt">Recipedia</span>
+          </a>
+
+          <ul class="social-links">
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon class="social-icon" name="logo-instagram"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon class="social-icon" name="logo-facebook"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon class="social-icon" name="logo-twitter"></ion-icon
+              ></a>
+            </li>
+          </ul>
+
+          <p class="copyright">
+            Copyright &copy; <span class="year">2027</span> by Recipedia, Inc.
+            All rights reserved.
+          </p>
+        </div>
+
+        <div class="address-col">
+          <p class="footer-heading">Contact us</p>
+          <address class="contacts">
+            <p class="address">
+              623 donelaiciu g., 2nd Floor, Vilnius, Lithuania
+            </p>
+            <p>
+              <a class="footer-link" href="tel:415-201-6370">8-201-63700</a
+              ><br />
+              <a class="footer-link" href="mailto:hello@Recipedia.com"
+                >hello@Recipedia.com</a
+              >
+            </p>
+          </address>
+        </div>
+
+        <nav class="nav-col">
+          <p class="footer-heading">Account</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Create account</a></li>
+            <li><a class="footer-link" href="#">Sign in</a></li>
+            <li><a class="footer-link" href="#">iOS app</a></li>
+            <li><a class="footer-link" href="#">Android app</a></li>
+          </ul>
+        </nav>
+
+        <nav class="nav-col">
+          <p class="footer-heading">Company</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">About Recipedia</a></li>
+            <li><a class="footer-link" href="#">For Business</a></li>
+            <li><a class="footer-link" href="#">Cooking partners</a></li>
+            <li><a class="footer-link" href="#">Careers</a></li>
+          </ul>
+        </nav>
+
+        <nav class="nav-col">
+          <p class="footer-heading">Resources</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Recipe directory </a></li>
+            <li><a class="footer-link" href="#">Help center</a></li>
+            <li><a class="footer-link" href="#">Privacy & terms</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+
+    <script defer src="js/script.js"></script>
+  </body>
+</html>
